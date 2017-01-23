@@ -1,8 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var ctrlMain = require('../controllers/main');
+var ctrlChapters = require('../controllers/chapters');
+var ctrlOthers = require('../controllers/others');
 
-/* GET home page. */
-router.get('/', ctrlMain.index);
+/* Chapters. */
+router.get('/', ctrlChapters.contents);
+router.get('/chapter1', ctrlChapters.chapter1);
+
+/* Ohters */
+router.get('/about', ctrlOthers.about);
 
 module.exports = router;
