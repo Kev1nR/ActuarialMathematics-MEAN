@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  #banner.page-header
+    .row
+      h1= title
+  .row
+    p !{(content).replace(/\n/g, '<br/>')}

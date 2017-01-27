@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  #banner.page-header
+    .row
+      .col-lg-12
+        h1= title
+        p #{description}
+  .row
+    each model in models
+      div(class='col-xs-12 col-sm-3 list-group-item chapter-colour-#{model.colour}')
+        h4 
+          a(href='/survival-models/#{model.url}') #{model.title}

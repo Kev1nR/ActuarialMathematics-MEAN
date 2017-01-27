@@ -1,5 +1,11 @@
-.review {padding-bottom: 5px;}
-.panel-body.review-container {padding-top: 0;}
-.review-header {margin-bottom: 10px;}
-.review-author {margin: 0 5px;}
-.review-timestamp {color: #ccc;}
+.chapter {padding-bottom: 5px;}
+.panel-body.chapter-container {padding-top: 0;}
+.chapter-header {margin-bottom: 10px;}
+.chapter-author {margin: 0 5px;}
+.chapter-colour-red {background-color: red;}
+.chapter-colour-orange {background-color: orange;}
+.chapter-colour-yellow {background-color: yellow;}
+.chapter-colour-green {background-color: green;}
+.chapter-colour-blue {background-color: blue;}
+.chapter-colour-indigo {background-color: blueviolet;}
+.chapter-colour-violet {background-color: violet;}

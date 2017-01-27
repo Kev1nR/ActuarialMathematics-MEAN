@@ -4,9 +4,11 @@ block content
   #banner.page-header
     .row
       .col-lg-12
-        h1 Actuarial Mathematics
-          small &nbsp;Samples from actuarial mathematics book
+        h1= pageHeader.title
+          small &nbsp;#{pageHeader.strapline}
   .row
-    .col-xs-12.col-sm-3
-      p Chapter listing area.
-
+    each chapter in chapters
+      div(class='col-xs-12 col-sm-3 list-group-item chapter-colour-#{chapter.colour}')
+        h4 
+          a(href='/#{chapter.url}') #{chapter.title}
+    
