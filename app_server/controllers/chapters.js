@@ -51,14 +51,14 @@ module.exports.survivalModels = function(req, res){
                    models: [
                        {
                             title: 'Gompertz Law',
-                            description: 'Gompertz Law ... $$ S_x(t) = exp \\left\\{ \\frac{-B}{\\log c} c^x (c^t - 1 ) \\right\\} $$',
-                            url: 'gompertz-law',
+                            description: 'Gompertz Law defines a survival model of the form $$ S_x(t) = exp \\left\\{ \\frac{-B}{\\log c} c^x (c^t - 1 ) \\right\\} $$',
+                            url: '/survival-models/gompertz-law',
                             colour: 'red'
                        },
                        {
                             title: 'Makeham\'s Law',
                             description: 'Makeham\'s Law ... ',
-                            url: 'makehams-law',
+                            url: '/survival-models/makehams-law',
                             colour: 'orange'
                        }
                    ]

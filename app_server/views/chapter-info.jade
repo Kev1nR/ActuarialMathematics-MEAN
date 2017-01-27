@@ -8,6 +8,7 @@ block content
         p #{description}
   .row
     each model in models
-      div(class='col-xs-12 col-sm-3 list-group-item chapter-colour-#{model.colour}')
+      div(class='col-xs-12 col-sm-4 list-group-item chapter-colour-#{model.colour}')
         h4 
-          a(href='/survival-models/#{model.url}') #{model.title}
+          a(href='#{model.url}') #{model.title}
+        p= model.description
