@@ -1,0 +1,1 @@
+module.exports.gompertzlaw = function(req, res){}

@@ -8,6 +8,7 @@ require('./app_server/models/db');
 
 var index = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
+var routesApi = require('./app_api/routes/index');
 
 var app = express();
 
@@ -19,12 +20,13 @@ app.set('view engine', 'jade');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/api', routesApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,4 +46,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.post('/survival-models/test', function(req, res){
+  console.log("called successfully");
+})
 module.exports = app;
