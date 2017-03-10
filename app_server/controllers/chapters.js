@@ -2,7 +2,7 @@ var request = require('request');
 
 var apiOptions = { server : "http://localhost:8083/" };
 if (process.env.NODE_ENV === 'production') {
-  apiOptions.server = "http://actuarial-mathematics-api.herokuapp.com/";
+  apiOptions.server = "https://actuarial-mathematics-api.herokuapp.com/";
 }
 
 /* GET 'contents' page */

@@ -2,7 +2,7 @@ var request = require('request');
 
 var apiOptions = { server : "http://localhost:8083/" };
 if (process.env.NODE_ENV === 'production') {
-  apiOptions.server = "http://actuarial-mathematics-api.herokuapp.com/";
+  apiOptions.server = "https://actuarial-mathematics-api.herokuapp.com/";
 }
 
 /* GET Gompertz Law */
@@ -45,7 +45,7 @@ module.exports.gompertzLawResults = function(req, res, next){
             
             if (err) {
                 console.log(err);
-                resultsData = {data:{}, error:err.message}
+               resultsData = {data:{}, error:err.message}
             } else if (response.statusCode === 200) {
                 console.log(body);
                 resultsData = body;
