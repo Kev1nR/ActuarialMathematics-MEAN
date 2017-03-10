@@ -46,7 +46,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.post('/survival-models/test', function(req, res){
-  console.log("called successfully");
-})
 module.exports = app;
