@@ -4,15 +4,19 @@ block view
     .col-sm-4.col-xs-12
         form.form-horizontal(action='',method='POST',id='gompertz', role="form", type="application/json")
             each arg in queryParms
+             - var val = (arg.value === null ? arg.default : arg.value)
              div.form-group
                 label(class='control-label', for="#{arg.id}" ) #{arg.name}:
-                input(class='form-control input-sm', type='text', id="#{arg.id}", name="#{arg.id}", value="#{arg.default}")
+                input(class='form-control input-sm', type='text', id="#{arg.id}", name="#{arg.id}", value="#{val}")
             div.form-group
                 button(type='submit',class='btn btn-success') Calculate
     .col-sm-8
-        if results.error == ''
+        if results.error == ''   
+            div#chart-placeholder Chart will be here     
+            
             p #{results.data.age}
               each item in results.data.SurvivalData
                 p #{item.t} = #{item.mortality}
+            
         else
             p= results.error           
