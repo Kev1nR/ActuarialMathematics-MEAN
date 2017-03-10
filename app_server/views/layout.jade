@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-app='widgets')
   head
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
@@ -27,6 +27,8 @@ html
         .row
           .col-xs-12
             small &copy; Kevin Roche 2017
+    script(src='/angular/angular.min.js')
+    script(src='/angular/widgets.js')
     script(src='/javascripts/jquery.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
     script(src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML')
