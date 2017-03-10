@@ -12,9 +12,9 @@ module.exports.gompertzLaw = function(req, res, next){
             title: 'Gompertz Law',
             description: 'Gompertz Law ... $$ S_x(t) = exp \\left\\{ \\frac{-B}{\\log c} c^x (c^t - 1 ) \\right\\} $$',
             queryParms: [
-                {name: 'B', id:'B', default:0.001, error:''},
-                {name: 'c', id:'c', default:1.02, error:''},
-                {name: 'x', id:'x', default:40, error:''}],
+                {name: 'B', id:'B', value: null, default:0.001, error:''},
+                {name: 'c', id:'c', value: null, default:1.02, error:''},
+                {name: 'x', id:'x', value: null, default:40, error:''}],
             results:{
                 data:{
                     age:40, 
@@ -58,18 +58,14 @@ module.exports.gompertzLawResults = function(req, res, next){
                 title: 'Gompertz Law',
                 description: 'Gompertz Law ... $$ S_x(t) = exp \\left\\{ \\frac{-B}{\\log c} c^x (c^t - 1 ) \\right\\} $$',
                 queryParms: [
-                    {name: 'B', id:'B', default:0.001, error:''},
-                    {name: 'c', id:'c', default:1.02, error:''},
-                    {name: 'x', id:'x', default:40, error:''}],
+                    {name: 'B', id:'B', value: args.B, default:0.001, error:''},
+                    {name: 'c', id:'c', value: args.c, default:1.02, error:''},
+                    {name: 'x', id:'x', value: args.x, default:40, error:''}],
                 results: {
                     data: resultsData[0], 
                     error:''}
             });
         });
-    
-    
-    
-    
 }
 
 /* GET Makeham's Law */
